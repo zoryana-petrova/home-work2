@@ -1,0 +1,42 @@
+.header{
+    background: #ffffff; 
+}
+
+/* --------- header-top --------- */
+.header__top {
+    border-bottom: 1px solid #ebeef0;
+    padding: 23px 0; 
+}
+
+.socials__item{
+    @include inlineblock(middle); 
+    margin-left: 12px;
+
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+.socials__link{
+    display: block;
+    width: 26px;
+    height: 26px;
+    @include border-radius(50%); 
+    background: #303030;
+    position: relative;
+}
+
+.socials__icon{
+    @include absolute-center; 
+}
+
+$socials: fb, vk, tw;   
+$socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
+
+@each $social in $socials {
+    .socials__item_#{$social} {
+        .socials__icon {
+            @include get-sprite($socials-map, $social);
+        }
+    }
+}
