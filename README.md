@@ -1,6 +1,6 @@
-required: ruby;
 
-1. gem install compass
-2. gem install sass-globbing
-3. npm install
-4. gulp
+1. git clone git@github.com:zoryana-petrova/home-work2.git site
+2. cd site
+3. bower i
+4. npm i
+8. gulp
