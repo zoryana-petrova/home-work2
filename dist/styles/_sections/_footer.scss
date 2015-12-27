@@ -1,0 +1,72 @@
+.footer{
+    background: url('/img/bg/footer_bg.png') center center;
+    position: relative;
+}
+
+.footer__top{
+    padding-top: 34px; 
+}
+
+.footer__left{
+    width: 45%;
+    float: left;
+    padding-top: 34px; 
+}
+
+.footer__right{
+    width: 55%;
+    float: left;
+    text-align: right;
+}
+
+.logo_footer{
+    .logo__img{
+        max-width: 255px;
+    }
+}
+$dark-socials-map: sprite-map('icons/socials_dark/*.png', $spacing: 70px);
+
+.footer_socials{
+    margin-bottom: 21px;
+
+    .socials__link{
+        width: 45px;
+        height: 45px;
+        background: #ffffff;
+        display: block;
+    }
+
+    .socials__item{
+        margin-left: 26px;
+    }
+
+    $items: fb, vk, tw;
+  
+    @each  $item in $items{
+        .socials__item_#{$item}{
+            .socials__link{
+                &:after{
+                    @include get-sprite($dark-socials-map, $item);
+                    content: "";
+                    @include absolute-center;
+                }
+            }
+        }
+    }
+
+    $items_hover: fb_hover, vk_hover, tw_hover;
+
+    @each  $item in $items_hover{
+        .socials__item_#{$item}{
+            &:hover:after{
+                @include get-sprite($dark-socials-map, $item);
+                content: "";
+                @include absolute-center;
+            }
+        }
+    }
+}
+
+  
+
+    

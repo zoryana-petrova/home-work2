@@ -18,19 +18,19 @@
                                 label.filter__choose-label 
                                     input(name="location" type="radio").filter__choose-input
                                     .filter__choose-elem
-                                    .filter__chhose-text= item
+                                    .filter__chose-text= item
             li.filter__item
                 .filter__title 
                     a(href="#").filter__title-link Бренды 
                 .filter__content
                     ul.filter__choose.filter__choose_checkboxes
-                        - var items = ["Lenovo", "Apple","Samsung", "Asus","Motorola"]
+                        - var items = ["Lenovo", "Apple", "Samsung", "Asus", "Motorola"]
                         each item in items 
                             li.filter__choose-item
                                 label.filter__choose-label 
-                                    input(name="location" type="radio").filter__choose-input
+                                    input(name="" type="checkbox").filter__choose-input
                                     .filter__choose-elem
-                                    .filter__chhose-text= item
+                                    .filter__chose-text= item
                 .filter_reset-wrap
                     a(href="#").filter__reset Сбросить фильтр
             li.filter__item
@@ -42,19 +42,19 @@
                             .filter__slider-left
                                 .filter__slider-text от
                                 input(name="" type="text" plaseholder="").filter__slider-input.filter__slider-input_from
-                                .filter__slider-right
-                                    .filter__slider-text до
-                                    input(name="" type="text" plaseholder="").filter__slider-input.filter__slider-input_to
-                                .filter__slider-element
-            li.filter__item
+                            .filter__slider-right
+                                .filter__slider-text до
+                                input(name="" type="text" plaseholder="").filter__slider-input.filter__slider-input_to
+                        .filter__slider-element
+            li.filter__item.filter__choose-color
                 .filter__title
                     a(href="#").filter__title-link Цвет
                 .filter__content
                     ul.filter__colors
-                        - var colors = ['ffffff', 'cdcdcd', '000000', '002d53', 'ff1100', 'fff324', 'ff9243', '78c479', '00a7ff', 'a670b0', 'f879b0', '913d14']
+                        - var colors = ['#ffffff', '#cdcdcd', '#000000', '#002d53', '#ff1100', '#fff324', '#ff9243', '#78c479', '#00a7ff', '#a670b0', '#f879b0', '#913d14']
                         each color in colors
                             li.filter__colors-item
-                                a(href="#" style="background-color: #" + color).filter__colors-link
+                                a(href="#" style="background-color:" + color).filter__colors-link
             li.filter__item
                 .filter__title
                     a(href="#").filter__title-link Операционная система
@@ -65,9 +65,9 @@
                         each item in items 
                             li.filter__choose-item
                                 label.filter__choose-label 
-                                    input(name="location" type="radio").filter__choose-input
+                                    input(name="" type="checkbox").filter__choose-input
                                     .filter__choose-elem
-                                    .filter__chhose-text= item
+                                    .filter__chose-text= item
                 .filter_reset-wrap
                     a(href="#").filter__reset Сбросить фильтр
 

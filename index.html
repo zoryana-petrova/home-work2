@@ -9,7 +9,7 @@
 		<title>Главная страница </title>
 		<meta name="viewport" content="width=device-width">
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
-		<script src="/bower/modernizr/modernizr.js"></script>
+		<script src="bower/modernizr/modernizr.js"></script>
 		<!-- For ie9--><!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> 
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
@@ -23,11 +23,11 @@
 						<div class="container"> 
 							<div class="header__left">
 								<ul class="socials"> 
-									<li class="socials__item socials__itemfb"><a href="#" class="socials__link">
+									<li class="socials__item socials__item_fb"><a href="#" class="socials__link">
 											<div class="socials__icon"></div></a></li>
-									<li class="socials__item socials__itemvk"><a href="#" class="socials__link">
+									<li class="socials__item socials__item_vk"><a href="#" class="socials__link">
 											<div class="socials__icon"></div></a></li>
-									<li class="socials__item socials__itemtw"><a href="#" class="socials__link">
+									<li class="socials__item socials__item_tw"><a href="#" class="socials__link">
 											<div class="socials__icon"></div></a></li>
 								</ul>
 							</div>
@@ -37,17 +37,19 @@
 						</div>
 					</div>
 					<div class="header__bottom">
-						<div class="container"><a href="#" class="logo"><img src="" alt="cooltech logo" class="logo__img">
+						<div class="container"><a href="#" class="logo"><img src="/img/logos/header_logo.png" alt="cooltech logo" class="logo__img">
 								<div class="logo__text">cooltech </div></a>
 							<div class="search"> 
-								<div class="form search__form"> 
+								<form class="search__form"> 
 									<input name="" type="text" placeholder="Что будем искать" class="search__form-input">
 									<input name="" type="submit" value="Найти" class="search__form-submit">
-								</div>
+								</form>
 							</div>
 							<div class="menu">
 								<ul class="menu__list">
-									<li class="menu__item"><a href="#" class="menu__link"></a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Карта проезда</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">История заказов</a></li>
+									<li class="menu__item"><a href="#" class="menu__link">Корзина</a></li>
 								</ul>
 							</div>
 						</div>
@@ -57,7 +59,7 @@
 					<div class="container">
 						<ul class="nav__list">
 							<li class="nav__item nav__item_"><a href="#" class="nav__link">Планшеты</a></li>
-							<li class="nav__item nav__item_"><a href="#" class="nav__link">Мобильные телефоны</a></li>
+							<li class="nav__item nav__item_active"><a href="#" class="nav__link">Мобильные телефоны</a></li>
 							<li class="nav__item nav__item_"><a href="#" class="nav__link">Мр3 плееры</a></li>
 							<li class="nav__item nav__item_"><a href="#" class="nav__link">Персональные компьютеры</a></li>
 							<li class="nav__item nav__item_"><a href="#" class="nav__link">Аксессуары</a></li>
@@ -68,13 +70,13 @@
 				<div class="breadcrumbs">
 					<div class="container">
 						<ul class="breadcrumbs__list">
-							<li class="breadcrumbs__item"><a href="#" class="breadcrumbs__links">Главная</a></li>
-							<li class="breadcrumbs__itemactive"><a href="#" class="breadcrumbs__links">Каталог</a></li>
+							<li class="breadcrumbs__item "><a href="#" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item active"><a href="#" class="breadcrumbs__link">Каталог</a></li>
 						</ul>
 					</div>
 				</div>
 				<article class="content-wrapper">
-					<div class="conteiner">
+					<div class="container">
 						<div class="main-title">Мобильные телефоны</div>
 						<div class="main-content">
 							<div class="sidebar">
@@ -94,14 +96,14 @@
 														<label class="filter__choose-label"> 
 															<input name="location" type="radio" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Во всех магазинах</div>
+															<div class="filter__chose-text">Во всех магазинах</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
 															<input name="location" type="radio" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">В ближайшем ко мне магазине</div>
+															<div class="filter__chose-text">В ближайшем ко мне магазине</div>
 														</label>
 													</li>
 												</ul>
@@ -113,37 +115,37 @@
 												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Lenovo</div>
+															<div class="filter__chose-text">Lenovo</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Apple</div>
+															<div class="filter__chose-text">Apple</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Samsung</div>
+															<div class="filter__chose-text">Samsung</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Asus</div>
+															<div class="filter__chose-text">Asus</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label"> 
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
-															<div class="filter__chhose-text">Motorola</div>
+															<div class="filter__chose-text">Motorola</div>
 														</label>
 													</li>
 												</ul>
@@ -158,32 +160,32 @@
 														<div class="filter__slider-left">
 															<div class="filter__slider-text">от</div>
 															<input name="" type="text" plaseholder="" class="filter__slider-input filter__slider-input_from">
-															<div class="filter__slider-right">
-																<div class="filter__slider-text">до</div>
-																<input name="" type="text" plaseholder="" class="filter__slider-input filter__slider-input_to">
-															</div>
-															<div class="filter__slider-element"></div>
+														</div>
+														<div class="filter__slider-right">
+															<div class="filter__slider-text">до</div>
+															<input name="" type="text" plaseholder="" class="filter__slider-input filter__slider-input_to">
 														</div>
 													</div>
+													<div class="filter__slider-element"></div>
 												</div>
 											</div>
 										</li>
-										<li class="filter__item">
+										<li class="filter__item filter__choose-color">
 											<div class="filter__title"><a href="#" class="filter__title-link">Цвет</a></div>
 											<div class="filter__content">
 												<ul class="filter__colors">
-													<li class="filter__colors-item"><a href="#" style="background-color: #ffffff" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #cdcdcd" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #000000" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #002d53" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #ff1100" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #fff324" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #ff9243" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #78c479" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #00a7ff" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #a670b0" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #f879b0" class="filter__colors-link"></a></li>
-													<li class="filter__colors-item"><a href="#" style="background-color: #913d14" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#ffffff" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#cdcdcd" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#000000" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#002d53" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#ff1100" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#fff324" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#ff9243" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#78c479" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#00a7ff" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#a670b0" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#f879b0" class="filter__colors-link"></a></li>
+													<li class="filter__colors-item"><a href="#" style="background-color:#913d14" class="filter__colors-link"></a></li>
 												</ul>
 											</div>
 										</li>
@@ -195,37 +197,37 @@
 											<ul class="filter__choose filter__choose_checkboxes">
 												<li class="filter__choose-item">
 													<label class="filter__choose-label"> 
-														<input name="location" type="radio" class="filter__choose-input">
+														<input name="" type="checkbox" class="filter__choose-input">
 														<div class="filter__choose-elem"></div>
-														<div class="filter__chhose-text">Android</div>
+														<div class="filter__chose-text">Android</div>
 													</label>
 												</li>
 												<li class="filter__choose-item">
 													<label class="filter__choose-label"> 
-														<input name="location" type="radio" class="filter__choose-input">
+														<input name="" type="checkbox" class="filter__choose-input">
 														<div class="filter__choose-elem"></div>
-														<div class="filter__chhose-text">iOs</div>
+														<div class="filter__chose-text">iOs</div>
 													</label>
 												</li>
 												<li class="filter__choose-item">
 													<label class="filter__choose-label"> 
-														<input name="location" type="radio" class="filter__choose-input">
+														<input name="" type="checkbox" class="filter__choose-input">
 														<div class="filter__choose-elem"></div>
-														<div class="filter__chhose-text">Symbian</div>
+														<div class="filter__chose-text">Symbian</div>
 													</label>
 												</li>
 												<li class="filter__choose-item">
 													<label class="filter__choose-label"> 
-														<input name="location" type="radio" class="filter__choose-input">
+														<input name="" type="checkbox" class="filter__choose-input">
 														<div class="filter__choose-elem"></div>
-														<div class="filter__chhose-text">Windows Mobile</div>
+														<div class="filter__chose-text">Windows Mobile</div>
 													</label>
 												</li>
 												<li class="filter__choose-item">
 													<label class="filter__choose-label"> 
-														<input name="location" type="radio" class="filter__choose-input">
+														<input name="" type="checkbox" class="filter__choose-input">
 														<div class="filter__choose-elem"></div>
-														<div class="filter__chhose-text">Custom</div>
+														<div class="filter__chose-text">Custom</div>
 													</label>
 												</li>
 											</ul>
@@ -257,7 +259,7 @@
 		<footer class="footer">
 			<div class="footer__top">
 				<div class="container">
-					<div class="footer__left"><a href="#" class="logo logo_footer"><img src="" alt="cooltech logo" class="logo__img">
+					<div class="footer__left"><a href="#" class="logo logo_footer"><img src="/img/logos/footer_logo.png" alt="cooltech logo" class="logo__img">
 							<div class="logo__text">cooltech </div></a></div>
 					<div class="footer__right">
 						<ul class="socials footer_socials">

@@ -1,12 +1,13 @@
 @import "compass";
-@import url(/fonts/stylesheet.css);
+
 
 /* --------- normalize --------- */
 
 @import "_misc/normalize";
 
 /* --------- fonts --------- */
-@inport "_misc/_fonts";
+@import url(fonts/stylesheet.css);
+
 /* --------- mixins --------- */
 
 @import "_misc/mixins";
@@ -15,8 +16,16 @@
 
 @import "_misc/adjustment";
 
+/* ---------misc icons sprite --------- */
+$misc-sprite: sprite-map('icons/_misc/*.png', $spacing: 70px);
+$black: #303030;
+$orange: #fd8331;
+$grey: #dee2e5;
+
 /* --------- sections--------- */
-@import "_sections/_header";
+@import "_sections/**/*";
+;
+
 
 
 

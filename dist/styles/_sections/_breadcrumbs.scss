@@ -1,0 +1,35 @@
+.breadcrumbs__item{
+    @include inlineblock(middle);
+    font-size: 14px;
+
+    &:before {
+        content: '>';
+        @include inlineblock(middle);
+        margin-right: 5px;
+    }
+
+    &:first-child{
+        &:before{
+            display: none;
+        }
+    }
+
+    &.active{
+        .breadcrumbs__link{
+            color: $orange;
+            text-decoration: underline;
+        }
+    }
+}
+
+.breadcrumbs__list{
+    margin-bottom: 21px; 
+}
+
+.breadcrumbs__link{
+    color: $black;
+    font-size: 14px;
+    line-height: 16px;
+    @include inlineblock(middle);
+    text-decoration: none;
+ }
