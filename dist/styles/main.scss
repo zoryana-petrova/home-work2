@@ -7,7 +7,7 @@
 
 /* --------- fonts --------- */
 @import url(fonts/stylesheet.css);
-
+@import "_misc/_fonts";
 /* --------- mixins --------- */
 
 @import "_misc/mixins";
@@ -23,8 +23,12 @@ $orange: #fd8331;
 $grey: #dee2e5;
 
 /* --------- sections--------- */
+@import "_plugins/**/*";
+
+/* --------- sections--------- */
 @import "_sections/**/*";
-;
+
+
 
 
 

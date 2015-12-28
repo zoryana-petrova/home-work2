@@ -1,16 +1,23 @@
-$fontsDir : 'fonts/';
-$fonts : (opensans-bold-webfont, opensans-bolditalic-webfont, opensans-extrabold-webfont, opensans-extrabolditalic-webfont, opensans-italic-webfont, opensans-light-webfont, opensans-lightitalic-webfont, opensans-semibold-webfont, opensans-semibolditalic-webfont, opensans-regular-webfont);
-
-@each $font in $fonts {
-  @font-face {
-    font-family: $font;
-    src: url($fontsDir+$font+'.eot');
-    src: url($fontsDir+$font+'.eot?#iefix') format('embedded-opentype'),
-    url($fontsDir+$font+'.woff2') format('woff2'),
-    url($fontsDir+$font+'.woff') format('woff'),
-    url($fontsDir+$font+'.ttf') format('truetype'),
-    url($fontsDir+$font+'.svg#open_sansbold') format('svg');
+@font-face {
+    font-family: 'als_rublregular';
+    src: url('/css/fonts/rouble-webfont.eot');
+    src: url('/css/fonts/rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/css/fonts/rouble-webfont.woff2') format('woff2'),
+         url('/css/fonts/rouble-webfont.woff') format('woff'),
+         url('/css/fonts/rouble-webfont.ttf') format('truetype'),
+         url('/css/fonts/rouble-webfont.svg#als_rublregular') format('svg');
     font-weight: normal;
     font-style: normal;
-  }
+}
+.rub{
+    font-family: 'als_rublregular';
+    font-style: normal;
+
+    &:after{
+        content: "a";
+        font-style: inherit;
+        font-size: inherit;
+        line-height: inherit;
+    }
+
 }

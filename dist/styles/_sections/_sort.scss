@@ -1,0 +1,72 @@
+.sort{
+    background: #e1ecef;
+    @include clearfix;
+    border: 1px solid $grey;
+    @include border-radius(5px);
+    margin-bottom: 21px;
+}
+
+.sort__title{
+    font-size: 14px;
+    line-height: 16px;
+    color: #59656d;
+    @include inlineblock(middle);
+    margin-right: 11px;
+}
+
+.sort__select{
+    @include inlineblock(middle);
+}
+
+.sort_left{
+    float: left;
+    width: 50%;
+}
+.sort__right{
+    float: right;
+    width: 50%;
+    text-align: right;
+}
+
+.sort__view{
+    @include inlineblock(middle);
+}
+
+.sort__view-list{
+    @include clearfix;
+}
+
+.sort__view-item{
+    float: left;
+    border-left: 1px solid $grey;
+}
+.sort__view-link{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: block;
+    outline: none !important;
+}
+.sort__view-icon{
+    @include absolute-center;
+}
+
+$views-map: sprite-map('icons/views/*.png', $spacing: 70px);
+
+$items: rows, grids, lines; 
+
+@each $item in $items{
+    .sort__view_#{$item}{
+        .sort__view-icon{
+            @include get-sprite($views-map, $item);
+        }
+        &:hover{
+            $hover-icon: $item + "-hover";
+            
+            .sort__view-icon{
+                @include get-sprite($views-map, $hover-icon);
+            }
+        }
+    }
+}
+

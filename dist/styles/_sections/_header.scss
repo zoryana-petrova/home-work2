@@ -32,11 +32,14 @@
 
 $socials: fb, vk, tw;   
 $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
-
+$socials-map-hover: sprite-map('icons/socials_hover/*.png', $spacing: 70px);
 @each $social in $socials {
     .socials__item_#{$social}{
         .socials__icon {
             @include get-sprite($socials-map, $social);
+            &:hover{
+            @include get-sprite($socials-map-hover, $social);
+            }
         }
     }
 }
@@ -136,7 +139,7 @@ $socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
 
 .search__form-submit{
     width: 78px;
-    height: 35px;
+    height: 36px;
     background: $orange;
     color: #ffffff;
     font-family: OpenSans-Semi;

@@ -99,3 +99,15 @@
 	font-weight: 300;
 	font-style: italic;
 }
+
+@font-face {
+    font-family: 'als_rublregular';
+    src: url('rouble-webfont.eot');
+    src: url('rouble-webfont.eot?#iefix') format('embedded-opentype'),
+         url('rouble-webfont.woff2') format('woff2'),
+         url('rouble-webfont.woff') format('woff'),
+         url('rouble-webfont.ttf') format('truetype'),
+         url('rouble-webfont.svg#als_rublregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

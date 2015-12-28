@@ -25,7 +25,7 @@
     }
 }
 $dark-socials-map: sprite-map('icons/socials_dark/*.png', $spacing: 70px);
-
+$dark-socials-map-hover: sprite-map('icons/socials_dark_hover/*.png', $spacing: 70px);
 .footer_socials{
     margin-bottom: 21px;
 
@@ -50,23 +50,44 @@ $dark-socials-map: sprite-map('icons/socials_dark/*.png', $spacing: 70px);
                     content: "";
                     @include absolute-center;
                 }
-            }
-        }
-    }
-
-    $items_hover: fb_hover, vk_hover, tw_hover;
-
-    @each  $item in $items_hover{
-        .socials__item_#{$item}{
-            &:hover:after{
-                @include get-sprite($dark-socials-map, $item);
-                content: "";
-                @include absolute-center;
+                &:hover{
+                    &:after{
+                        @include get-sprite($dark-socials-map-hover, $item);
+                    }
+                }
             }
         }
     }
 }
 
+.footer__nav-item{
+    @include inlineblock();
+    margin-left: 33px;
+    margin-bottom: 15px;
+}
   
+.footer__nav-link{
+    font-size: 14px;
+    line-height: 16px;
+    color: #ffffff;
 
-    
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.footer__bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #474747;
+    text-align: center;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.footer__copyright{
+    padding: 8px 0;
+}

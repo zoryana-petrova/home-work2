@@ -14,7 +14,81 @@ block content
 
                 .content
                     .sort
+                        .sort_left
+                            .sort__select-wrapper
+                                .sort__title
+                                    | Сортировать по
+                                .sort__select
+                                    select.sort__select-element
+                                        - var options = ["по цене", "по популярности"]
+                                        each option in options
+                                            option(value="")= option
+                        .sort__right
+                            .sort__title
+                                | Вид каталога
+                            .sort__view
+                                ul.sort__view-list
+                                    - var items = ['rows', 'grids', 'lines'] 
+                                    each item in items
+                                        li(class="sort__view-item sort__view_" + item data-view= item)
+                                            a(href="#").sort__view-link
+                                                .sort__view-icon
                     .products
+                        ul.products__list.products__list_lines
+                            - for (var i = 0; i < 9; i++)
+                                li.products__item
+                                    .products__item-inner
+                                        .products__left
+                                            .products__slideshow
+                                                .products__slideshow-block
+                                                    a(href="#").products__slideshow-display
+                                                        img(src="http://lorempixel.com/200/200/technics/6" alt="").products__slideshow-img
+                                                    ul.products__slideshow-thumbs
+                                                        - for (var j = 0; j < 3; j++)
+                                                            li.products__slideshow-item
+                                                                a(href="#").products__slideshow-link
+                                                                    img(src="http://lorempixel.com/45/45/technics/" + j alt="").products__slideshow-thumbs-img
+                                                .products__article
+                                                    .products__article-word  Атрикул
+                                                    .products__article-num 189238
+                                            .products__desc
+                                                .products__desc-title Samsung GT-I9301I GALAXY S 3
+                                                ul.productcs__desc-options
+                                                    - var options = {"Тип SIM-карты": "Micro-SIM", "Количество SIM-карт": "1", "Цвет": "Белый", "OC": "Android", "Связь 3G ": "Есть", "4G (LTE)": "Нет", "GPS-модуль": "Есть"}
+                                                    - var index = 0;
+                                                    - for (item in options)
+                                                        li(class="productcs__option-item" + (!(index++ % 2) ? ' productcs__option-item_colored' : ''))
+                                                            .productcs__option-key= item
+                                                            .productcs__option-value= options[item]
+                                                .products__raiting
+                                                    ul.products__rating-stars
+                                                        li.products__rating-stars-item.products__rating-stars-item_filed
+                                                        li.products__rating-stars-item.products__rating-stars-item_filed
+                                                        li.products__rating-stars-item.products__rating-stars-item_filed
+                                                        li.products__rating-stars-item.products__rating-stars-item_filed
+                                                        li.products__rating-stars-item
+                                                    .products__reting-amount 3
+                                        .products__right
+                                            .products__info
+                                                .products__price 11 290
+                                                    i.rub
+                                            .products__info-buttom
+                                                a(href="#").products__buy-btn В корзину
+                                                .products__availability
+                                                    | В наличии
+                    .pagination
+                        ul.pagination__list
+                            li.pagination__item.pagination__item_prev
+                                a(href="#").pagination__link
+                                    .pagination__mark
+                            - for (var i = 1; i < 4; i++)
+                                li.pagination__item
+                                    a(href="#").pagination__link
+                                        .pagination__mark= i
+                            li.pagination__item.pagination__item_next
+                                a(href="#").pagination__link
+                                    .pagination__mark
+
             .attension
                 .main-title
                     | Важная информация
@@ -25,4 +99,3 @@ block content
                     p Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.
                     p Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
                     p Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
-
