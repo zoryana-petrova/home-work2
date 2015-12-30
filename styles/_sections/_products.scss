@@ -197,7 +197,7 @@ $stars-map: sprite-map("icons/stars/*.png", $spacing: 70px);
     right: -4px;
 }
 
-.products__buy-btn {
+.products__buy-btn{
     @include inlineblock();
     text-decoration: none;
     padding: 6px 16px;

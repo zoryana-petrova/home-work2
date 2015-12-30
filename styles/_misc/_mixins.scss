@@ -5,19 +5,19 @@
 	vertical-align: $valine;
 }
 
-@mixin clearfix {
+@mixin clearfix{
 	&:before,
 	&:after {
 		content: "";
 		display: table;
 	}
 
-	&:after {
+	&:after{
 		clear: both;
 	}
 }
 
-@mixin border-radius($radius: 5px) {
+@mixin border-radius($radius: 5px){
 	-webkit-border-radius: $radius;
 	-moz-border-radius: $radius;
 	border-radius: $radius;
@@ -27,13 +27,13 @@
 	background-clip: padding-box;
 }
 
-@mixin box-shadow($string...) {
+@mixin box-shadow($string...){
 	-webkit-box-shadow: $string;
 	-moz-box-shadow: $string;
 	box-shadow: $string;
 }
 
-@mixin transition($transition...) {
+@mixin transition($transition...){
 	-webkit-transition: $transition;
 	-moz-transition: $transition;
 	-ms-transition: $transition;
@@ -41,7 +41,7 @@
 	transition: $transition;
 }
 
-@mixin placecolor($color: #000000) {
+@mixin placecolor($color: #000000){
 	&::-webkit-input-placeholder {
 		color: $color;
 	}
@@ -56,7 +56,7 @@
 	}
 }
 
-@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000) {
+@mixin vertical-gradient($top-color: #ffffff, $bottom-color: #000000){
 	background-color: $top-color;
 	background-image: -webkit-gradient(linear, left top, left bottom, from($top-color), to($bottom-color)); /* Chrome, Safari 4+ */
 	background-image: -webkit-linear-gradient(top, $top-color, $bottom-color); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
@@ -66,7 +66,7 @@
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=$top-color, EndColorStr=$bottom-color);
 }
 
-@mixin transform($transforms...) {
+@mixin transform($transforms...){
 	-moz-transform: $transforms;
 	-o-transform: $transforms;
 	-ms-transform: $transforms;
@@ -76,7 +76,7 @@
 
 /* --------- centered --------- */
 
-@mixin absolute-center {
+@mixin absolute-center{
 	top: 0;
 	left: 0;
 	right: 0;
@@ -87,7 +87,7 @@
 
 /* --------- compass sprites --------- */
 
-@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true) {
+@mixin get-sprite($map, $sprite, $repeat: no-repeat, $height: true, $width: true){
 	$sprite-image: sprite-file($map, $sprite);
 	$sprite-map: sprite-url($map);
 	$sprite-position: sprite-position($map, $sprite);
@@ -95,12 +95,12 @@
 
 	background: $sprite-map $sprite-position $repeat;
 
-	@if ($height == true) {
+	@if ($height == true){
 		$sprite-height: image-height($sprite-image);
 		height: $sprite-height;
 	}
 
-	@if ($width == true) {
+	@if ($width == true){
 		$sprite-width: image-width($sprite-image);
 		width: $sprite-width;
 	}

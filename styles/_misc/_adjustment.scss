@@ -4,12 +4,12 @@ $container-width: 1105px;
 $footer-height: 222px;
 $body-font: 'Open Sans', sans-serif;
 
-html {
+html{
 	width:100%;
 	font-size: 100.01%;
 }
 
-body {
+body{
 	font: 16px/1.41 $body-font;
     -webkit-font-smoothing: antialiased;
 	width:100%;
@@ -17,7 +17,7 @@ body {
 	background: #f4f4f4;
 }
 
-.container {
+.container{
     margin: 0 auto;
     position: relative;
     padding: 0 15px;
@@ -25,7 +25,7 @@ body {
 	@include clearfix;
 }
 
-.wrapper {
+.wrapper{
     position: relative;
     min-height: 100%;
     height: auto !important;
@@ -33,40 +33,40 @@ body {
     overflow: hidden;
 	min-width: $container-width + 30px;
 
-	&:after {
+	&:after{
 		display: block;
 		position: relative;
 		height: $footer-height;
 	}
 }
 
-table {
+table{
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
-ul {
+ul{
 	padding: 0;
 	margin: 0;
 	list-style: none outside none;
 
-	li {
+	li{
 		padding: 0;
 		left: 0;
 	}
 }
 
-p {
+p{
 	padding: 0;
 	margin: 0;
 }
 
-footer {
+footer{
 	position: relative;
 	min-width: $container-width + 30;
 	height: $footer-height;
 }
 
-.maincontent {
+.maincontent{
 	margin-bottom: 15px;
 }

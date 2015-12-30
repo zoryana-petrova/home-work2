@@ -3,7 +3,7 @@
 }
 
 /* --------- header-top --------- */
-.header__top {
+.header__top{
     border-bottom: 1px solid #ebeef0;
     padding: 25px 0; 
 }
@@ -44,22 +44,22 @@ $socials-map-hover: sprite-map('icons/socials_hover/*.png', $spacing: 70px);
     }
 }
 
-.header__left {
+.header__left{
     // width: 115px;
     float: left;
 }
 
-.header__right {
+.header__right{
     // width: 470px;
     float: right;
     font-size: 14px;
 }
 
-.address {
+.address{
     @include inlineblock(middle); 
     margin-right: 85px;
 
-    &:before {
+    &:before{
         content: '';
         @include get-sprite($misc-sprite, pin);
         @include inlineblock(middle);
@@ -67,7 +67,7 @@ $socials-map-hover: sprite-map('icons/socials_hover/*.png', $spacing: 70px);
     }
 }
 
-.phone {
+.phone{
     @include inlineblock(middle); 
     color: $black;
     text-decoration: none;
@@ -101,7 +101,7 @@ $socials-map-hover: sprite-map('icons/socials_hover/*.png', $spacing: 70px);
     left: -9999px;
 }
 
-.search  {
+.search{
     float: left;
     margin-right: 50px;
     margin-left: 56px;
