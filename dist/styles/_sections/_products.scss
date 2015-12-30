@@ -1,15 +1,21 @@
-.products__list{
+.products__list,
+.products__list_rows,
+.products__list_lines{
    border: 1px solid $grey;
    @include  border-radius(7px);
-   overflow: hidden;
-   background: #ffffff;
+
 }
-
 .products__item{
-    border-top: 1px solid $grey;
-
-    &:first-child{
-        border-top: none;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid $grey;
+    // &:first-child{
+    //     border-bottom: none;
+    // }
+     &:hover{
+        box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px 1px;
+        transition: 0.2s;
+        cursor: pointer;
     }
 }
 
@@ -62,6 +68,12 @@
 .products__slideshow-item{
     margin-left: 15px;
     float: left;
+
+    &.active{
+        .products__slideshow-link{
+            border-color: $orange;
+        }
+    }
 }
 .products__slideshow-link{
     @extend .products__slideshow-display;
@@ -70,6 +82,9 @@
     @include  border-radius(3px);
     margin-bottom: 0;
     position: relative;
+    &:focus{
+        outline: none;
+    }
 }
 
 .products__slideshow-thumbs-img{
@@ -188,12 +203,13 @@ $stars-map: sprite-map("icons/stars/*.png", $spacing: 70px);
 .products__buy-btn {
     @include inlineblock();
     text-decoration: none;
-    padding: 9px 12px;
+    padding: 6px 16px;
     font-family: 'OpenSans-Bold';
     @include border-radius(4px);
     background: $orange;
     color: #ffffff;
     margin-bottom: 9px;
+    font-size: 14px;
 }
 .products__price{
     color: $black;

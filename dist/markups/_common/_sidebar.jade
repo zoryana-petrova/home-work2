@@ -31,8 +31,8 @@
                                     input(name="" type="checkbox").filter__choose-input
                                     .filter__choose-elem
                                     .filter__chose-text= item
-                .filter_reset-wrap
-                    a(href="#").filter__reset Сбросить фильтр
+                    .filter_reset-wrap
+                        a(href="#").filter__reset Сбросить фильтр
             li.filter__item
                 .filter__title
                     a(href="#").filter__title-link Цена
@@ -41,11 +41,11 @@
                         .filter__slider-displays
                             .filter__slider-left
                                 .filter__slider-text от
-                                input(name="" type="text" plaseholder="").filter__slider-input.filter__slider-input_from
+                                input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_from
                             .filter__slider-right
                                 .filter__slider-text до
-                                input(name="" type="text" plaseholder="").filter__slider-input.filter__slider-input_to
-                        .filter__slider-element
+                                input(name="" type="text" placeholder="").filter__slider-input.filter__slider-input_to
+                        div(class="filter__slider-element" data-min="0" data-max="35000")
             li.filter__item.filter__choose-color
                 .filter__title
                     a(href="#").filter__title-link Цвет
@@ -59,7 +59,7 @@
                 .filter__title
                     a(href="#").filter__title-link Операционная система
                 .filter__content
-                     .filter__content
+                    .filter__content
                     ul.filter__choose.filter__choose_checkboxes
                         - var items = ['Android', 'iOs', 'Symbian', 'Windows Mobile', 'Custom']
                         each item in items 
@@ -68,8 +68,8 @@
                                     input(name="" type="checkbox").filter__choose-input
                                     .filter__choose-elem
                                     .filter__chose-text= item
-                .filter_reset-wrap
-                    a(href="#").filter__reset Сбросить фильтр
+                    .filter_reset-wrap
+                        a(href="#").filter__reset Сбросить фильтр
 
 
 

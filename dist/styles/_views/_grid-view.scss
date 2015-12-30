@@ -4,6 +4,7 @@
     @include border-radius(0px);
     margin-left: -11px;
     background: transparent;
+    padding-top: 5px;
 
     .products__item{
         @include inlineblock();
@@ -14,7 +15,12 @@
         border: 1px solid $grey;
         margin-left: 11px;
         margin-bottom: 11px;
-        background: #ffffff;
+
+        &:hover{
+            box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px 1px;
+            transition: 0.2s;
+            cursor: pointer;
+        }
     }
 
     .products__item-inner{

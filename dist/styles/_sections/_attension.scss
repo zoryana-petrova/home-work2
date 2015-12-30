@@ -2,7 +2,19 @@
     p{
         font-size: 14px;
         line-height: 20px;
-        color: &black;
+        color: $black;
         margin-bottom: 20px;
+        text-align: justify;
+        text-indent: 36px;
+    }
+
+    .column{
+        width: 530px !important;
+        &.first{
+            float: left !important;
+        }
+        &.last{
+            float: right !important;
+        }
     }
 }
