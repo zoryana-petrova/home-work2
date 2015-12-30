@@ -1,0 +1,150 @@
+.header{
+    background: #ffffff; 
+}
+
+/* --------- header-top --------- */
+.header__top {
+    border-bottom: 1px solid #ebeef0;
+    padding: 25px 0; 
+}
+
+.socials__item{
+    @include inlineblock(middle); 
+    margin-left: 12px;
+
+    &:first-child{
+        margin-left: 0;
+    }
+}
+
+.socials__link{
+    display: block;
+    width: 26px;
+    height: 26px;
+    @include border-radius(50%); 
+    background: #303030;
+    position: relative;
+}
+
+.socials__icon{
+    @include absolute-center; 
+}
+
+$socials: fb, vk, tw;   
+$socials-map: sprite-map('icons/socials/*.png', $spacing: 70px);
+$socials-map-hover: sprite-map('icons/socials_hover/*.png', $spacing: 70px);
+@each $social in $socials {
+    .socials__item_#{$social}{
+        .socials__icon {
+            @include get-sprite($socials-map, $social);
+            &:hover{
+            @include get-sprite($socials-map-hover, $social);
+            }
+        }
+    }
+}
+
+.header__left {
+    // width: 115px;
+    float: left;
+}
+
+.header__right {
+    // width: 470px;
+    float: right;
+    font-size: 14px;
+}
+
+.address {
+    @include inlineblock(middle); 
+    margin-right: 85px;
+
+    &:before {
+        content: '';
+        @include get-sprite($misc-sprite, pin);
+        @include inlineblock(middle);
+        margin-right: 9px; 
+    }
+}
+
+.phone {
+    @include inlineblock(middle); 
+    color: $black;
+    text-decoration: none;
+    margin-right: 8px; 
+    font-size: 18px;
+
+    &:before{
+        content: "";
+        @include inlineblock(middle);
+        margin-right: 11px;
+        @include get-sprite($misc-sprite, tel);
+    }
+}
+/* --------- header-bottom --------- */
+.header__bottom{
+    background:#f4f4f4;
+    padding: 29px 0;
+}
+.logo{
+    float: left;
+}
+
+.logo__img{
+    display: block;
+    max-width: 250px;
+}
+
+.logo__text{
+    position: absolute;
+    top: 0;
+    left: -9999px;
+}
+
+.search  {
+    float: left;
+    margin-right: 50px;
+    margin-left: 56px;
+}
+
+.menu{
+    float: left;
+    padding-top: 8px;
+}
+
+.menu__link{
+    font-size: 16px;
+    line-height: 18px;
+    color: $black;
+    font-family: OpenSans-Semi;
+
+    &:hover{
+        color: $orange;
+    }
+}
+
+.menu__item{
+    @include inlineblock();
+    margin-left: 28px;
+
+    &:first-child{
+        margin-left: 0;
+    }
+}
+.search__form-input{
+    border: 1px solid #dee2e5;
+    @include border-radius(5px);
+    padding: 8px 15px;
+    width: 259px;
+    margin-right: -8px;
+}
+
+.search__form-submit{
+    width: 78px;
+    height: 36px;
+    background: $orange;
+    color: #ffffff;
+    font-family: OpenSans-Semi;
+    @include border-radius(0 5px 5px 0);
+    border: 1px solid $orange;
+}

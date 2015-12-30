@@ -1,0 +1,17 @@
+.main-title{
+    font-size: 20px;
+    line-height: 22px;
+    color: $black;
+    font-family: 'OpenSans-Bold';
+    margin-bottom: 32px;
+}
+
+.main-content{
+    @include clearfix;
+    margin-bottom: 30px;
+}
+
+.content{
+    float: right;
+    width: 747px;
+}
